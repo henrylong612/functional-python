@@ -5,6 +5,7 @@ Your solutions should use the map and filter functions,
 and not for loops or list comprehensions.
 '''
 
+
 def evens(n):
     '''
     Returns a list of even numbers from 0 to n inclusive.
@@ -25,6 +26,7 @@ def evens(n):
         list.append(i)
     return list
 
+
 def threes(n):
     '''
     Returns a list of all numbers from 0 to n inclusive that contain the digit 3.
@@ -44,7 +46,8 @@ def threes(n):
     for i in range(0, n + 1):
         if "3" in str(i):
             list.append(i)
-    return list        
+    return list
+
 
 def small_words(text):
     '''
@@ -67,7 +70,8 @@ def small_words(text):
     for word in words:
         if len(word)<5:
             list.append(word)
-    return list        
+    return list
+
 
 def squares(n):
     '''
@@ -86,7 +90,8 @@ def squares(n):
     list = []
     for i in range(1, n + 1):
         list.append(i*i) 
-    return list        
+    return list
+
 
 def lengths(strings):
     '''
@@ -102,4 +107,4 @@ def lengths(strings):
     list = []
     for string in strings:
         list.append(len(string))
-    return list    
+    return list
