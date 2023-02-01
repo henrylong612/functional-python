@@ -71,6 +71,7 @@ def small_words(text):
     xs = list(xs)
     return xs
 
+
 def squares(n):
     '''
     Returns a list of all square number between 1 and n inclusive.
@@ -89,6 +90,7 @@ def squares(n):
     xs = map(lambda x: x**2, xs)
     xs = list(xs)
     return xs
+
 
 def lengths(strings):
     '''
