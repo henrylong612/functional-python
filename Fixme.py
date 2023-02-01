@@ -46,7 +46,7 @@ def threes(n):
     xs = range(n + 1)
     xs = filter(lambda x: '3' in str(x), xs)
     xs = list(xs)
-    return xs 
+    return xs
 
 
 def small_words(text):
