@@ -21,10 +21,10 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-    list = []
-    for i in range(0, n + 1, 2):
-        list.append(i)
-    return list
+    xs = range(n + 1)
+    xs = filter(lambda x: (x + 1) % 2, xs)
+    xs = list(xs)
+    return xs
 
 
 def threes(n):
@@ -43,11 +43,10 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-    list = []
-    for i in range(0, n + 1):
-        if "3" in str(i):
-            list.append(i)
-    return list
+    xs = range(n + 1)
+    xs = filter(lambda x: '3' in str(x), xs)
+    xs = list(xs)
+    return xs 
 
 
 def small_words(text):
@@ -67,13 +66,10 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-    list = []
-    words = text.split()
-    for word in words:
-        if len(word) < 5:
-            list.append(word)
-    return list
-
+    xs = text.split()
+    xs = filter(lambda x: len(x) < 5, xs)
+    xs = list(xs)
+    return xs
 
 def squares(n):
     '''
@@ -89,11 +85,10 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
-    list = []
-    for i in range(1, n + 1):
-        list.append(i*i)
-    return list
-
+    xs = range(1, n + 1)
+    xs = map(lambda x: x**2, xs)
+    xs = list(xs)
+    return xs
 
 def lengths(strings):
     '''
@@ -107,7 +102,6 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
-    list = []
-    for string in strings:
-        list.append(len(string))
-    return list
+    xs = map(lambda x: len(x), strings)
+    xs = list(xs)
+    return xs
